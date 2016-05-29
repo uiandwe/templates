@@ -1,0 +1,117 @@
+
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #eee;
+    font-size: 87.5%;
+    line-height: 1.5;
+    text-align: left;
+}
+
+a{
+    text-decoration: 
+}
+
+a:link, a:visited{
+    
+}
+a:hover, a:active{
+    
+}
+
+.body{
+    margin: 0 auto;
+    width: 70%;
+    clear:both;
+}
+
+.mainheader img{
+    width: 10%;
+    height: auto;
+    margin: 2% 0;
+    border: 1px solid #999;
+}
+
+
+.mainheader nav{
+    background-color: #666;
+    height: 40px;
+    border-radius: 5px;
+    -moz-border-radius:  5px;
+    -webkit-border-radius:  5px;
+}
+
+.mainheader nav ul{
+    list-style: none;
+    margin: 0 auto;
+}
+
+.mainheader nav ul li{
+    float: left;
+    display: inline;
+}
+
+
+.mainheader nav a:link, 
+.mainheader nav a:visited {
+    color: #fff;
+    display: inline-block;
+    padding: 10px 25px;   
+}
+
+.mainheader nav a:hover,
+.mainheader nav a:active,
+.mainheader nav .active a:link,
+.mainheader nav .active a:visited{
+    background-color: #CF5C3F;
+    text-shadow: none;
+}
+
+.mainheader nav a{
+    border-radius: 5px;
+}
+
+
+.mainContent{
+    line-height: 25px;
+    border-radius: 5px;
+    width: 75%;
+    float: left; 
+    margin-top: 2% ;
+}
+
+.content footer{
+    background-color: inherit;
+    color: inherit;
+}
+
+.topcontent{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 3% 5%;
+    margin-bottom: 2%;
+}
+
+.sidebar{
+    float: right;
+    width: 22%;
+    margin: 2% 0 2% 3%;
+    
+}
+.sidebar aside{
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 2%;
+    padding: 2% 3%;
+}
+ 
+footer{
+    clear: both;
+    padding: 1%;
+    background-color: darkgray;
+    color: #fff;
+    text-align: center;
+    
+}

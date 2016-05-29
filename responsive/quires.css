@@ -1,0 +1,31 @@
+@media screen and (max-width: 767px){
+    .mainheader img{
+        width: 100%;   
+    }
+    .mainheader nav {
+        overflow: auto;
+        height: 100%;
+    }
+    .mainheader nav ul{
+        text-align: center;
+        overflow: inherit;
+        padding: 0;
+    }
+    .mainheader nav ul li{
+        display: block;
+        clear:both;
+        width: 100%;
+    }
+    
+    .mainheader nav a:link, 
+    .mainheader nav a:visited {
+        display: block;
+    }
+    
+    .mainContent{
+        width: 100%;
+    }
+    .sidebar{
+        width: 100%;
+    }
+}
