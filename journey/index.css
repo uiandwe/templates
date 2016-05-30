@@ -1,0 +1,274 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3{
+     margin-bottom: 50px;
+    text-align: center;
+    font-family: inherit;
+    font-size: 40px;
+    font-weight: 600;
+    color: #003b64;
+}
+
+a {
+    color: #fff;
+}
+section{
+    margin-top: 50px;
+}
+.clear{
+    clear: both;
+}
+
+.overflow{
+    overflow: auto;
+    padding-bottom: 10px;
+}
+
+.span_1_of_4{
+    float: left;
+    margin-right: 12px;
+    padding: 0 10px;
+}
+.head{
+    width: 100%;
+}
+
+.head{
+    position: relative;
+    overflow: auto;
+}
+
+.head .nav{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    background-color: rgba(1, 1, 1, 0.5);
+}
+
+.head .logo a{
+    float: left;
+    color: #fff200;
+    font-family: 'Sigmar One', cursive;
+    font-size: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left : 25px;
+    margin-top: 20px;
+}
+
+.head nav{
+    margin: 50px;
+    float: right;
+}
+
+.head nav ul{
+    list-style: none;
+}
+.head nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+    color: #fff;
+}
+.head nav ul li a{
+    padding: 5px 20px;
+    border-style: none solid none solid;
+}
+
+.head .js--nav-icon{
+    color: #fff;
+    font-size: 30px;
+    float: right;
+    margin-top: -50px;
+    margin-right: 10px;
+    display: none;
+    
+}
+.head img{
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    border: 0;
+}
+
+.head h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 350%;
+    color: #fff;
+    margin-left: -35%;
+}
+
+/*
+contaier
+*/
+.contaier{
+    width:100%;
+}
+
+.contain-wrapper{
+    background-color: #003b64;
+}
+
+.contain-wrapper:nth-child(2n+1){
+    background-color: #fff;
+}
+
+section{
+    width:1070px;
+    margin: 30px auto;
+}
+/*about*/
+.about{
+    text-align: center;
+    
+}
+
+.about h2{
+   font-size: 250%;
+}
+
+.about p{
+    font-size: 110%;
+    line-height: 30px;
+    margin-bottom: 50px;
+}
+
+.about .span_1_of_4 h3{
+    font-size: 150%;
+}
+
+.about .span_1_of_4 span{
+    padding: 10px;
+    line-height: 27px;
+    text-align: center;
+    color: #888b90;
+}
+
+/*agency*/
+.agency{
+    padding: 50px 0;
+}
+.agency h2{
+    color: #fff;
+}
+.agency h3{
+    color: #CCC;
+    margin-top: 50px;
+    font-size: 25px;
+}
+
+.agency .span_1_of_4{
+    text-align: center;
+    padding: 0 20px;
+}
+
+/*gallery*/
+.gallery h2{
+    color: #fff;
+}
+
+.gallery .span_1_of_2{
+    float: left;
+    padding-right: 25px;
+}
+
+.gallery .span_12_of_12{
+    float: left;
+    padding-right: 35px;
+}
+.gallery img{
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+/* contact*/
+.contain-wrapper:last-of-type{
+    background-image: url("img/contact.jpg");
+}
+.contact {
+    margin-bottom: 0px;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact h2{
+    color: #fff;
+}
+
+.contact form{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.contact input,
+.contact textarea{
+    width: 100%;
+    margin: 10px 0;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #777;
+    border-radius: 2px;
+    padding: 15px;
+    font-size: 110%;
+}
+
+.contact input[type=text]{
+    height: 50px;
+}
+
+.contact p{
+    color: #fff;
+    margin: 20px 0;
+}
+
+.contact .newsletter form{
+    position: relative;
+}
+.contact .submit{
+    width: 48px;
+    height: 48px;
+    background-image: url('./img/subscribe.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    background-color: #028fcc;
+    top: 2px;
+    right: 2px;
+    border: 1px solid;
+}
+
+/*footer*/
+footer{
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    height: 100px;
+    padding: 50px 0;
+}
+
+/*tab*/
+.nav-tabs a{
+    color: black;
+}
+.nav>li>a:hover {
+    background-color: #23527c !important;
+    color: #fff;
+}
+
+.nav li.active a:hover {
+    background-color: #fff !important;
+    
+}
+
+.tab-content .tab-pane{
+    padding: 10px;
+}
