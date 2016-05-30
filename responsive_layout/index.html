@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>미디어쿼리 설정</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="index.css" type="text/css" >
+    </head>
+    <body>
+        <div class="container">
+            <div class="row mobile">
+                <h1>모바일</h1>
+                <code>
+                    @media(max-width:767px){
+                        .mobile{
+                            display:block;
+                            background: #eee;
+                        }
+                    }
+                </code>
+            </div>
+            
+            <div class="row tablet">
+                <h1>타블렛</h1>
+                <code>
+                    @media(min-width:767px) and (max-width: 1024px{
+                        .tablet{
+                            display:block;
+                            background: #eee;
+                        }
+                    }
+                </code>
+            </div>
+            
+            <div class="row desktop">
+                <h1>테스크탑</h1>
+                <code>
+                    @media(min-width:1025px){
+                        .desktop{
+                            display:block;
+                            background: #eee;
+                        }
+                    }
+                </code>
+            </div>
+        </div>
+    </body>
+</html>
