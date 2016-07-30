@@ -1,0 +1,98 @@
+@media only screen and (max-width: 1200px){
+    .nav nav ul{
+        display: block;
+    }
+}
+
+
+/*smail tablets to big tables 768 to 1023px */
+@media only screen and (max-width: 1023px){
+    .head{
+        overflow: inherit;
+    }
+    
+    .head h2{
+        display: none;
+    }
+    
+    .nav nav{
+        float:none;
+        clear: both;
+        margin: 0;
+        margin-left: 45%;
+    }
+    
+    .head .js--nav-icon{
+        display: block;   
+    }
+    
+    .nav nav ul{
+        display: none;
+    }
+    
+    .head nav ul li {
+        display: block;
+        padding-bottom: 10px;
+        font-size: 120%;
+    }
+    
+    .head nav ul li a {
+        border-style: none;   
+    }
+   .head h2{
+     font-size: 200%;  
+    }
+    
+    section{
+        width: 100%;
+    }
+    
+    .span_1_of_4 {
+        float: left;
+        margin-right: 5px;
+        padding: 0 5px;
+    }
+    .gallery{
+        padding-left: 50px;
+    }
+}
+
+/* smail phones to smail tablets 481 to 767 */
+@media only screen and (max-width: 767px){
+    h1, h2, h3 {
+     margin-bottom: 0px;
+    }
+    
+    .head h2{
+        left: 0;
+        margin-left: 0;
+    }
+    .span_1_of_4 {
+        width: 100%;
+        margin-top: 30px;
+    }
+    
+    .span_1_of_4 h3{
+        margin-bottom: 5px;
+    }
+    
+    .gallery{
+        padding: 0 10px;
+    }
+    .gallery .span_1_of_2,
+    .gallery .span_12_of_12{
+        width: 100%;
+        padding: 0;
+    }
+    
+    .contact form{
+        padding: 0 10px;
+        width: 100%;
+    }
+    
+    .contact .submit{
+        right: 12px;
+    }
+}
+
+
