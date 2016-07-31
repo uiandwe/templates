@@ -33,16 +33,57 @@ $(document).ready(function(){
                 moveId = 1;
             }
 
+
+            $(function(){
+
+                $('#'+(moveId-1)+' .content-wrapper').css('z-index', 999).css("position", 'absolute');
+                $('#'+(moveId-1)+' .content-wrapper').fadeIn()
+                .animate({top:0, opacity: 0},
+                    { duration: 700,
+                        queue: false,
+                        complete: function(){
+                            $('#'+(moveId-1)+' .content-wrapper').css("position", 'inherit').css("opacity", 1).css('top', 'auto');
+                        }
+                    }, function() {
+
+                }).finish();
+
+                $('.contain-wrapper').animate({
+                scrollTop: $(".contain-wrapper").offset().top + (height*(moveId-1))
+                }, { duration: 600, queue: false });
+
+            });
+
+
         }else{
             moveId = parseInt(moveId)+1;
             if(moveId >= $(document).find('section').length ){
                 moveId = $(document).find('section').length;
             }
+
+            $(function(){
+
+                $('#'+(moveId-1)+' .content-wrapper').css('z-index', 999).css("position", 'absolute');
+                $('#'+(moveId-1)+' .content-wrapper').fadeIn()
+                .animate({top:0, opacity: 0.1},
+                    { duration: 700,
+                        queue: false,
+                        complete: function(){
+                            $('#'+(moveId-1)+' .content-wrapper').css("position", 'inherit').css("opacity", 1).css('top', 'auto');
+                        }
+                    }, function() {
+
+                }).finish();
+
+                $('.contain-wrapper').animate({
+                scrollTop: $(".contain-wrapper").offset().top + (height*(moveId-1))
+                }, { duration: 600, queue: false });
+
+            });
+
         }
 
-        $('.contain-wrapper').animate({
-             scrollTop: $(".contain-wrapper").offset().top + (height*(moveId-1))
-        }, 500);
+
 
 
     })

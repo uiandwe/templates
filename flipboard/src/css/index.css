@@ -75,8 +75,14 @@ contaier
 }
 .drag .content-wrapper{
     height: 50%;
+    background-color: white;
 }
 
+.drag-move{
+    z-index: 999;
+    position: inherit;
+    top: 0px;
+}
 /*footer*/
 footer{
 
