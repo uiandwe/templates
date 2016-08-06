@@ -2,7 +2,8 @@ $(document).ready(function(){
 
     var mainCanvas = document.getElementById("myCanvas");
     var mainContext = mainCanvas.getContext('2d');
-
+    var width = 500;
+    var height = 500;
     var circles = [];
 
     function Circle(radius, speed, width, xPos, yPos, angle) {
@@ -12,23 +13,42 @@ $(document).ready(function(){
       this.xPos = xPos;
       this.yPos = yPos;
       this.opacity = 0.05 + Math.random() * 0.5;
-        this.angle = angle
-      this.counter = 1;
-      this.sign = 1;
-      var signHelper = Math.floor(Math.random() * 2);
+        this.angle = angle;
+
+
 
     }
 
     Circle.prototype.update = function() {
 
-      this.counter += this.sign * this.speed;
+        mainContext.beginPath();
 
-      mainContext.beginPath();
+        this.xPos += Math.sin(this.angle)*this.speed;
+        this.yPos += Math.cos(this.angle)*this.speed;
+
+        if(this.xPos > width){
+
+            if(0 < radianToDegree(this.angle) <= 90){
+                this.angle = degreeToRadian(360-radianToDegree(this.angle));
+            }
+            else{
+                this.angle = degreeToRadian(270-(radianToDegree(this.angle)-90));
+            }
+        }
+
+        if(y <= 0){
+            if( 180 <= radianToDegree(this.angle) <= 270){
+                this.angle = degreeToRadian(90-(this.angle-90));
+            }
+            else{
+                this.angle = degreeToRadian(360-(this.angle-180));
+            }
+        }
 
       mainContext.arc(
-          this.xPos+=Math.sin(this.angle)*this.speed,
-        this.yPos+=Math.cos(this.angle)*this.speed,
-        this.width,
+            this.xPos,
+            this.yPos+=Math.cos(this.angle)*this.speed,
+            this.width,
         0,
         Math.PI * 2,
         false);
@@ -41,11 +61,12 @@ $(document).ready(function(){
 
     function drawCircles() {
       for (var i = 0; i < 20; i++) {
-        var randomX = Math.round(-200 + Math.random() * 700);
-        var randomY = Math.round(-200 + Math.random() * 700);
-        var speed = 1 - (Math.random() * (0.5 - 0.1) + 0.1).toFixed(4);
+        var randomX = Math.round(Math.random() * width);
+        var randomY = Math.round(Math.random() * height);
+        var speed = 5 - (Math.random() * (0.5 - 0.1) + 0.1).toFixed(4);
         var size = 5 - Math.floor((Math.random() * 4) + 1);
           var angle =  Math.floor((Math.random() * 360) + 1);
+            angle = degreeToRadian(angle);
         var circle = new Circle(100, speed, size, randomX, randomY, angle);
         circles.push(circle);
       }
@@ -53,8 +74,15 @@ $(document).ready(function(){
     }
     drawCircles();
 
+    function degreeToRadian(x){
+        return x*3.14/180;
+    }
+
+    function radianToDegree(x){
+        return 180*x/3.14;
+    }
     function draw() {
-      mainContext.clearRect(0, 0, 500, 500);
+      mainContext.clearRect(0, 0, width, height);
 
       for (var i = 0; i < circles.length; i++) {
         var myCircle = circles[i];
