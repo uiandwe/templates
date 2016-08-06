@@ -50,3 +50,12 @@ section {
   top:0;
   left:0;
 }
+
+img{
+    width:300px;
+    height:300px;
+}
+#myCanvas{
+    position: fixed;
+    z-index: -10;
+}

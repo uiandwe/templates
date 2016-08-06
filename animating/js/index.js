@@ -7,12 +7,12 @@ $(document).ready(function(){
     var circles = [];
 
     function Circle(radius, speed, width, xPos, yPos, angle) {
-      this.radius = radius;
-      this.speed = speed;
-      this.width = width;
-      this.xPos = xPos;
-      this.yPos = yPos;
-      this.opacity = 0.05 + Math.random() * 0.5;
+        this.radius = radius;
+        this.speed = speed;
+        this.width = width;
+        this.xPos = xPos;
+        this.yPos = yPos;
+        this.opacity = 0.05 + Math.random() * 0.5;
         this.angle = angle;
 
     }
@@ -66,9 +66,9 @@ $(document).ready(function(){
             this.xPos,
             this.yPos,
             this.width,
-        0,
-        Math.PI * 2,
-        false);
+            0,
+            Math.PI * 2,
+            false);
 
       mainContext.closePath();
 
