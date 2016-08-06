@@ -43,7 +43,24 @@ $(document).ready(function(){
             }
         }
 
+        if(this.xPos <= 0){
+            if( 180 <= radianToDegree(this.angle) <= 270){
+                this.angle = degreeToRadian(360-radianToDegree(this.angle));
+            }
+            else{
+                this.angle = degreeToRadian(180-(270-radianToDegree(this.angle)));
+            }
+        }
 
+
+        if(this.yPos > height){
+            if( 0 <= radianToDegree(this.angle) <= 90){
+                this.angle = degreeToRadian(180-radianToDegree(this.angle));
+            }
+            else{
+                this.angle = degreeToRadian(270-(radianToDegree(this.angle)-270));
+            }
+        }
 
       mainContext.arc(
             this.xPos,
@@ -63,10 +80,10 @@ $(document).ready(function(){
       for (var i = 0; i < 10; i++) {
         var randomX = Math.round(Math.random() * width);
         var randomY = Math.round(Math.random() * height);
-        var speed = 5 - (Math.random() * (0.5 - 0.1) + 0.1).toFixed(4);
+        var speed = (Math.random() * (0.5 - 0.1) + 0.1).toFixed(4);
         var size = 5 - Math.floor((Math.random() * 4) + 1);
-          var angle =  Math.floor((Math.random() * 360) + 1);
-          angle = degreeToRadian(angle);
+        var angle =  Math.floor((Math.random() * 360) + 1);
+        angle = degreeToRadian(angle);
         var circle = new Circle(100, speed, size, randomX, randomY, angle);
         circles.push(circle);
       }
