@@ -5,16 +5,17 @@ $(document).ready(function(){
 
     var circles = [];
 
-    function Circle(radius, speed, width, xPos, yPos) {
+    function Circle(radius, speed, width, xPos, yPos, angle) {
       this.radius = radius;
       this.speed = speed;
       this.width = width;
       this.xPos = xPos;
       this.yPos = yPos;
       this.opacity = 0.05 + Math.random() * 0.5;
-
+        this.angle = angle
       this.counter = 1;
       this.sign = 1;
+      var signHelper = Math.floor(Math.random() * 2);
 
     }
 
@@ -24,8 +25,9 @@ $(document).ready(function(){
 
       mainContext.beginPath();
 
-      mainContext.arc(this.xPos + Math.cos(this.counter / 100) * this.radius,
-        this.yPos + Math.sin(this.counter / 100) * this.radius,
+      mainContext.arc(
+          this.xPos+=Math.sin(this.angle)*this.speed,
+        this.yPos+=Math.cos(this.angle)*this.speed,
         this.width,
         0,
         Math.PI * 2,
@@ -38,13 +40,13 @@ $(document).ready(function(){
     };
 
     function drawCircles() {
-      for (var i = 0; i < 100; i++) {
+      for (var i = 0; i < 20; i++) {
         var randomX = Math.round(-200 + Math.random() * 700);
         var randomY = Math.round(-200 + Math.random() * 700);
-        var speed = 0.5 - Math.floor((Math.random() * 0.3) + 0.1);
+        var speed = 1 - (Math.random() * (0.5 - 0.1) + 0.1).toFixed(4);
         var size = 5 - Math.floor((Math.random() * 4) + 1);
-
-        var circle = new Circle(100, speed, size, randomX, randomY);
+          var angle =  Math.floor((Math.random() * 360) + 1);
+        var circle = new Circle(100, speed, size, randomX, randomY, angle);
         circles.push(circle);
       }
       draw();
