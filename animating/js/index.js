@@ -1,9 +1,16 @@
 $(document).ready(function(){
+    //https://marvelapp.com/
+    var width = $("#bg-canvas").width();
+    var height = $("#bg-canvas").height();
+    $("#bg_circle").css("position", "fixed").css("z-index", "-10");
 
-    var mainCanvas = document.getElementById("myCanvas");
+
+    var mainCanvas = document.getElementById("bg_circle");
+    mainCanvas.width = width;
+    mainCanvas.height = height;
     var mainContext = mainCanvas.getContext('2d');
-    var width = 500;
-    var height = 500;
+
+
     var circles = [];
 
     function Circle(radius, speed, width, xPos, yPos, angle) {
@@ -81,7 +88,7 @@ $(document).ready(function(){
         var randomX = Math.round(Math.random() * width);
         var randomY = Math.round(Math.random() * height);
         var speed = 1+(Math.random() * (0.5 - 0.1) + 0.1).toFixed(4);
-        var size = 5 - Math.floor((Math.random() * 4) + 1);
+        var size = 10 - Math.floor((Math.random() * 4) + 1);
         var angle =  Math.floor((Math.random() * 360) + 1);
         angle = degreeToRadian(angle);
         var circle = new Circle(100, speed, size, randomX, randomY, angle);
@@ -89,7 +96,7 @@ $(document).ready(function(){
       }
       draw();
     }
-    drawCircles();
+
 
     function degreeToRadian(x){
         return x*3.14/180;
@@ -106,5 +113,9 @@ $(document).ready(function(){
         myCircle.update();
       }
       requestAnimationFrame(draw);
+    }
+
+    window.onload  = function() {
+        drawCircles();
     }
 });
