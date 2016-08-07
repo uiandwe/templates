@@ -80,7 +80,7 @@ $(document).ready(function(){
       for (var i = 0; i < 10; i++) {
         var randomX = Math.round(Math.random() * width);
         var randomY = Math.round(Math.random() * height);
-        var speed = (Math.random() * (0.5 - 0.1) + 0.1).toFixed(4);
+        var speed = 1+(Math.random() * (0.5 - 0.1) + 0.1).toFixed(4);
         var size = 5 - Math.floor((Math.random() * 4) + 1);
         var angle =  Math.floor((Math.random() * 360) + 1);
         angle = degreeToRadian(angle);
