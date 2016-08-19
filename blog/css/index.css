@@ -1,0 +1,48 @@
+/*
+baisc setup
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    font-family: sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    overflow-x: hidden;
+}
+
+
+.clearfix{
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.overflow-auto{
+    overflow:auto;
+}
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+
+section {
+    padding: 80px 0;
+    overflow: auto;
+}
+
+
+#bg-canvas{
+  position: absolute;
+  top:0;
+  left:0;
+}
+
