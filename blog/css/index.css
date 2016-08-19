@@ -13,6 +13,7 @@ body{
     font-weight: 300;
     font-size: 20px;
     overflow-x: hidden;
+    background: #f3f3f3;
 }
 
 
@@ -44,3 +45,40 @@ section {
 
 
 /*body*/
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+
+/*article*/
+.article{
+    background-color: #ffffff;
+    overflow: auto;
+    margin-bottom: 30px;
+}
+
+.article .date{
+    float:left;
+}
+
+.article .content-wrapper{
+    float:left;
+    padding: 10px 30px;
+}
+
+.article .content-body{
+    padding: 10px 0px 20px 0px;
+    border-bottom: 1px solid #8e8e8e;
+
+}
+
+.article .content-footer{
+    margin-top: 20px;
+}
+.article .content-footer .comments{
+    float:left;
+}
+
+.article .content-footer .likes{
+    float:right;
+}
