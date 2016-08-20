@@ -42,8 +42,14 @@ section {
 
 
 /*header*/
+.header{
 
+}
 
+.header .logo{float:left;}
+
+.header ul{list-style: none;}
+.header ul li{float:left;}
 /*body*/
 .container{
     width: 1170px;
@@ -52,18 +58,21 @@ section {
 
 /*article*/
 .article{
-    background-color: #ffffff;
+
     overflow: auto;
     margin-bottom: 30px;
 }
 
 .article .date{
     float:left;
+    background-color: #e8e8e8;
+    height: 150px;
 }
 
 .article .content-wrapper{
     float:left;
     padding: 10px 30px;
+    background-color: #ffffff;
 }
 
 .article .content-body{
