@@ -21,6 +21,9 @@ a{
 }
 
 
+h1, h2, h3, h4, h5, h6{color: #3d3d3f;}
+span, p{    color: #686869; text-align: justify; line-height: 26px; font-weight: 400;}
+
 .clearfix{
     content: '.';
     clear: both;
@@ -54,11 +57,11 @@ section {
 
 .header .logo{float:left; margin-left: 5px; }
 
-.header nav{overflow: inherit; margin: 0 auto;  width: 350px; padding-top: 20px;}
+.header nav{overflow: inherit; margin: 0 auto;  width: 450px; padding-top: 20px;}
 .header .menu_icon{    color: white;font-size: 30px; float: right; margin-right: 10px;  line-height: 20px;}
 .header ul{list-style: none;}
-.header ul li{float:left;color:#ffffff;margin-left: 25px;}
-.header ul li a:link , .header ul li a:visited{color: #ffffff;}
+.header ul li{float:left;color:#ffffff;margin-right: 25px;}
+.header ul li a:link , .header ul li a:visited{color: #ffffff; text-transform: uppercase;}
 
 /*body*/
 .container{
@@ -66,6 +69,9 @@ section {
     margin: 0 auto;
 }
 
+.container .title{    text-align: center; margin-left: -140px;      padding-bottom: 40px; padding-top: 20px;}
+.container .title h1{ text-transform: capitalize;}
+.container .title .lead-text{text-align: inherit;     font-size: 22px; font-weight: 300;}
 /*article*/
 .article{
 
