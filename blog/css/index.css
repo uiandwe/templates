@@ -16,6 +16,10 @@ body{
     background: #f3f3f3;
 }
 
+a{
+    text-decoration: none;
+}
+
 
 .clearfix{
     content: '.';
@@ -43,13 +47,19 @@ section {
 
 /*header*/
 .header{
-
+    width: 100%;
+    overflow: auto;
+    background-color: #3d3d3f;
 }
 
-.header .logo{float:left;}
+.header .logo{float:left; margin-left: 5px; }
 
+.header nav{overflow: inherit; margin: 0 auto;  width: 350px; padding-top: 20px;}
+.header .menu_icon{    color: white;font-size: 30px; float: right; margin-right: 10px;  line-height: 20px;}
 .header ul{list-style: none;}
-.header ul li{float:left;}
+.header ul li{float:left;color:#ffffff;margin-left: 25px;}
+.header ul li a:link , .header ul li a:visited{color: #ffffff;}
+
 /*body*/
 .container{
     width: 1170px;
