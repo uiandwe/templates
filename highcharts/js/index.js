@@ -4,11 +4,7 @@ $(document).ready(function(){
     // Uncomment to style it like Apple Watch
      (function (H) {
         H.wrap(H.Tooltip.prototype, 'hide', function (defaultCallback) {
-            if ($("#fixed").is(':checked')) {
-                //Do Nothing (Do Not Hide)
-            } else { // Call the default Hide Callback
-                defaultCallback.apply(this);
-            }
+
         });
     }(Highcharts));
 
@@ -49,6 +45,7 @@ $(document).ready(function(){
         },
 
         tooltip: {
+            enabled: false,
             borderWidth: 0,
             backgroundColor: 'none',
             shadow: false,
@@ -56,12 +53,7 @@ $(document).ready(function(){
                 fontSize: '16px'
             },
             pointFormat: '{series.name}<br><span style="font-size:2em; color: {point.color}; font-weight: bold">{point.y}%</span>',
-            positioner: function (labelWidth, labelHeight) {
-                return {
-                    x: 200 - labelWidth / 2,
-                    y: 180
-                };
-            }
+
         },
 
         pane: {
@@ -119,8 +111,8 @@ $(document).ready(function(){
                 'stroke-width': 2,
                 'zIndex': 10
             })
-            .translate(190, 26)
-            .add(this.series[2].group);
+
+
 
 
     });

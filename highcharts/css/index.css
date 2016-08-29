@@ -6,8 +6,17 @@ body {
 	background: #1c2326;
 }
 
-
-.highcharts-tooltip{
-	 transform: none !important;
+#container_img{
+	width: 150px;
+height: 150px;
+background-image: url("../img/sun.png");
+border: solid 2px;
+text-shadow: white 0px 0px 2px;
+font-size: 16px;
+background-size: 150px;
+margin: 0 auto;
+position: absolute;
+top: 135px;
+left: 50%;
+margin-left: -80px;
 }
-
