@@ -75,9 +75,32 @@ $(function () {
                 format: '<div style="text-align:center"><span style="font-size:25px;color:' +
                     ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span><br/>' +
                        '<span style="font-size:12px;color:silver">%</span></div>'
-            },
-            tooltip: {
-                valueSuffix: ' km/h'
+            }
+        }]
+
+    }));
+
+    //cpu
+    $('#container-cpu').highcharts(Highcharts.merge(gaugeOptions, {
+        yAxis: {
+            min: 0,
+            max: 100,
+            title: {
+                text: 'Cpu'
+            }
+        },
+
+        credits: {
+            enabled: false
+        },
+
+        series: [{
+            name: 'cpu',
+            data: [80],
+            dataLabels: {
+                format: '<div style="text-align:center"><span style="font-size:25px;color:' +
+                    ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y}</span><br/>' +
+                       '<span style="font-size:12px;color:silver">%</span></div>'
             }
         }]
 
@@ -100,9 +123,6 @@ $(function () {
                 format: '<div style="text-align:center"><span style="font-size:25px;color:' +
                     ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black') + '">{y:.1f}</span><br/>' +
                        '<span style="font-size:12px;color:silver">%</span></div>'
-            },
-            tooltip: {
-                valueSuffix: ' revolutions/min'
             }
         }]
 
