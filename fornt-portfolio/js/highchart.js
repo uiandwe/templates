@@ -31,8 +31,7 @@ $(function () {
         },
 
         xAxis: {
-            categories: ['Sales', 'Marketing', 'Development', 'Customer Support',
-                'Information Technology'],
+            categories: ['FrontEnd', 'BackEnd', 'Personality', 'Experience', 'Physical'],
             tickmarkPlacement: 'on',
             lineWidth: 0,
             labels: {
@@ -45,7 +44,8 @@ $(function () {
         yAxis: {
             gridLineInterpolation: 'polygon',
             lineWidth: 0,
-            min: 0
+            min: 0,
+            max: 10
         },
 
 
@@ -67,7 +67,7 @@ $(function () {
 
         series: [{
             name: 'Allocated Budget',
-            data: [10, 10, 10, 10, 5],
+            data: [10, 10, 10, 4, 8],
             pointPlacement: 'on'
         }]
 

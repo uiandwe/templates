@@ -90,7 +90,7 @@ section {
 }
 
 .content .left-content {
-    width: 50%;
+    width: 40%;
     float: left;
 }
 
@@ -128,7 +128,7 @@ section {
     list-style: none;
 }
 
-.content li {
+.content .left-content li {
     float: left;
     color: #fff;
     margin-right: 20px;
@@ -146,8 +146,34 @@ section {
 }
 
 .content .right-content {
-    width: 50%;
+    width: 45%;
     float: right;
 }
 
+.content .right-content .ability-tab .parents-list li {
+    overflow: auto;
+    margin: 10px 0;
+}
 
+.content .right-content .ability-tab .parents-list h4 {
+    font-size: 20px;
+    color: #fff;
+    float: left;
+    width: 20%;
+}
+
+.content .right-content .ability-tab .parents-list ul.child-list {
+    float: left;
+    width: 80%;
+
+}
+
+.content .right-content .ability-tab .parents-list ul.child-list li {
+    float: left;
+    color: #fff;
+    margin: 5px 10px;
+}
+
+.contact a {
+    color: #fff;
+}
