@@ -16,6 +16,10 @@ body {
     background: #f3f3f3;
 }
 
+@font-face {
+    font-family: 'Futura';
+    src: url("../fonts/Futura-T-OT-Book_19064.ttf") format('truetype');
+}
 a {
     text-decoration: none;
 }
@@ -24,12 +28,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #3d3d3f;
 }
 
-span, p {
-    color: #686869;
-    text-align: justify;
-    line-height: 26px;
-    font-weight: 400;
-}
 
 .clearfix {
     content: '.';
@@ -48,109 +46,108 @@ span, p {
     margin: 0 auto;
 }
 
+.sr-only {
+    overflow: hidden;
+    width: 0px;
+    height: 0px;
+}
 section {
     padding: 80px 0;
     overflow: auto;
 }
 
+.hidden {
+    display: none;
+}
 /*header*/
-.header {
-    width: 100%;
-    overflow: auto;
-    background-color: #3d3d3f;
-}
-
-.header .logo {
-    float: left;
-    margin-left: 5px;
-}
-
-.header nav {
-    overflow: inherit;
-    margin: 0 auto;
-    width: 450px;
-    padding-top: 20px;
-}
-
-.header .menu_icon {
-    color: white;
-    font-size: 30px;
-    float: right;
-    margin-right: 10px;
-    line-height: 20px;
-}
-
-.header ul {
-    list-style: none;
-}
-
-.header ul li {
-    float: left;
-    color: #ffffff;
-    margin-right: 25px;
-}
-
-.header ul li a:link, .header ul li a:visited {
-    color: #ffffff;
-    text-transform: uppercase;
-}
 
 /*body*/
 .container {
-    width: 1170px;
-    margin: 0 auto;
+
 }
 
-.container .title {
-    text-align: center;
-    margin-left: -140px;
-    padding-bottom: 40px;
+.container #background_video {
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/* content*/
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    overflow: auto;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.content .left-content {
+    width: 50%;
+    float: left;
+}
+
+.content h2 {
+    color: #fff;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Futura;
+}
+
+.content h2 span {
+    border: 3px solid white;
+    padding: 5px 5px 2px 2px;
+    margin-right: -6px;
+}
+
+.content h3, .content span, .content p {
+    color: #fff;
+}
+
+.content h3 {
+    font-weight: bold;
+    font-size: 29px;
     padding-top: 20px;
 }
 
-.container .title h1 {
-    text-transform: capitalize;
+.content p {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    line-height: 32px;
 }
 
-.container .title .lead-text {
-    text-align: inherit;
-    font-size: 22px;
-    font-weight: 300;
+.content ul {
+    list-style: none;
 }
 
-/*article*/
-.article {
-
-    overflow: auto;
-    margin-bottom: 30px;
-}
-
-.article .date {
+.content li {
     float: left;
-    background-color: #e8e8e8;
-    height: 150px;
+    color: #fff;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    font-size: 15px;
 }
 
-.article .content-wrapper {
-    float: left;
-    padding: 10px 30px;
-    background-color: #ffffff;
+.content .contact {
+    position: absolute;
+    bottom: 10px;
 }
 
-.article .content-body {
-    padding: 10px 0px 20px 0px;
-    border-bottom: 1px solid #8e8e8e;
+.content .introduce-option .panel-btn {
 
 }
 
-.article .content-footer {
-    margin-top: 20px;
-}
-
-.article .content-footer .comments {
-    float: left;
-}
-
-.article .content-footer .likes {
+.content .right-content {
+    width: 50%;
     float: right;
 }
+
+
